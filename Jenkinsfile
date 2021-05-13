@@ -30,13 +30,13 @@ sh 'mvn clean install'
 }
 */    
       
-
+   }
   post {
          always {
             echo "this is post stage code which no matter what displays all the time "
          }
       }
 }
-}
+
 
 
