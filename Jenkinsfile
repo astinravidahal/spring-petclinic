@@ -3,7 +3,7 @@ agent any
    stages {
       stage('mvn package'){
          steps {
-      sh './mvnw pacakge
+      sh './mvnw package '
             sh ' java -jar target/*.jar ' }
       }
  /*   stage ('maven validate'){
