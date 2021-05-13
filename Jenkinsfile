@@ -23,13 +23,14 @@ steps {
 echo " looks like the code has run successfully"
 }
 }
-      post {
+    
+      
+}
+  post {
          always {
             echo "this is post stage code which no matter what displays all the time "
          }
       }
-      
-}
 }
 
 
