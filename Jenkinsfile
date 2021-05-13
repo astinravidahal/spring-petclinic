@@ -1,26 +1,26 @@
 pipeline { 
 agent any 
    stages {
-    stage ('test'){
+    stage ('maven validate'){
     steps{
-      echo " this is just the test"
+      sh 'mvn validate'
 }
 }
-stage('compile'){
+stage('maven test'){
 steps {
-  echo "the code has compiled great" 
+ sh  'mvn test'
 }
 }
 
-stage ('run') { 
+stage (' maven compile') { 
 steps {
- echo "the code has run to the roof" 
+ sh 'mvn compile' 
 }
 }
 
-stage ('final'){
+stage ('mvn clean install'){
 steps {
-echo " looks like the code has run successfully"
+sh 'mvn clean install'
 }
 }
     
