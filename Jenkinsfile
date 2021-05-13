@@ -1,7 +1,12 @@
 pipeline { 
 agent any 
    stages {
-    stage ('maven validate'){
+      stage('mvn package'){
+         steps {
+      sh './mvnw pacakge
+            sh ' java -jar target/*.jar ' }
+      }
+ /*   stage ('maven validate'){
     steps{
       sh 'mvn validate'
 }
@@ -23,9 +28,9 @@ steps {
 sh 'mvn clean install'
 }
 }
-    
+*/    
       
-}
+
   post {
          always {
             echo "this is post stage code which no matter what displays all the time "
