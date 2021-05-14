@@ -14,16 +14,16 @@ agent any
          }
       
       }
-   }
+   
     
-   stages {
+    
       stage('check_env_variable') {
          steps {
             echo "this is my Jenkins_verison: ${JENKINS_VERSION} "
          }
       }
+   
    }
-
   /* stage ('maven validate'){
     steps{
       sh 'mvn validate'
