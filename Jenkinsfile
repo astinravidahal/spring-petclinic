@@ -3,11 +3,17 @@ agent any
      environment {
       JENKINS_VERSION = '1.2.30' 
    }
+     Parameters {
+          string {string(name: 'My_String' , default_value: 'hello' , Description:'hello this is my string parameter' ) } 
+          boleanParam { BoleanParam((name: 'My_boolen_value' , default_value: 'True' , Description:'hello this is my boolean parameter' )}
+                                    text  { text(name: 'My_Text' , default_value: 'hi' , Description:'hello this is my text parameter' )}
+                                    password { password (name: 'Pswd' , default_value: 'Secret' , Description:'hello this is my password parameter' )}
+                                    choice{ choice(name:'last_four_cellphone_number' , choices: ['5432', '6345' , '1020' ,'no_cellphone'])}
    stages { 
        
       stage('test') {
         
-          /*when {
+       /*  when {
             expression {
                BRANCH_NAME = 'FEATURE' } 
          } */
@@ -17,7 +23,18 @@ agent any
          }
       
       }
-   
+        
+        stage('check_parameters') {
+             steps {
+                  echo "my string name is : ${My_String} "
+                  echo "my text name is : ${My_Text} "
+                  echo "my Bolean_value name is : ${My_Boolen_value} "
+                  echo "my password name is : ${Pswd} "
+                  echo "my choices are : ${Last_four_cellphone_number} "
+                  
+             }
+             
+        }
     
     
       stage('check_env_variable') {
