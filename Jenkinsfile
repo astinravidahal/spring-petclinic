@@ -3,7 +3,7 @@ agent any
      environment {
       JENKINS_VERSION = '1.2.30' 
    }
-     Parameters {
+     parameters {
           string(name: 'My_String' , default_value: 'hello' , Description:'hello this is my string parameter' )  
           booleanParam(name: 'My_boolen_value' , default_value: 'True' , Description:'hello this is my boolean parameter' )
                                     text(name: 'My_Text' , default_value: 'hi' , Description:'hello this is my text parameter' )
@@ -27,11 +27,11 @@ agent any
         
         stage('check_parameters') {
              steps {
-                  echo "my string name is : ${My_String} "
-                  echo "my text name is : ${My_Text} "
-                  echo "my Bolean_value name is : ${My_Boolen_value} "
-                  echo "my password name is : ${Pswd} "
-                  echo "my choices are : ${Last_four_cellphone_number} "
+                  echo "my string name is : ${params.My_String} "
+                  echo "my text name is : ${params.My_Text} "
+                  echo "my Bolean_value name is : ${params.My_Boolen_value} "
+                  echo "my password name is : ${params.Pswd} "
+                  echo "my choices are : ${params.Last_four_cellphone_number} "
                   
              }
              
