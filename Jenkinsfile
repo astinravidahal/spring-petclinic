@@ -4,7 +4,14 @@ agent any
       stage('test') {
          when {
             expression {
-               BRANCH_NAME = 'FEATURE' } } } }
+               BRANCH_NAME = 'FEATURE' } 
+         } 
+         steps {
+            echo 'this is just the test' 
+         }
+      
+      }
+   }
       
   /* stage ('maven validate'){
     steps{
