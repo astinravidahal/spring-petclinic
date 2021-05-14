@@ -1,8 +1,6 @@
 pipeline { 
 agent any
-   environment {
-      JENKINS_VERSION = '1.2.30' 
-   }
+   
    stages { 
        
       stage('test') {
