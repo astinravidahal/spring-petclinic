@@ -4,10 +4,10 @@ agent any
       JENKINS_VERSION = '1.2.30' 
    }
      parameters {
-          string(name: 'My_String' , defaultvalue: 'hello' , description:'hello this is my string parameter' )  
-          booleanParam(name: 'My_boolen_value' , defaultvalue: 'True' , description:'hello this is my boolean parameter' )
-                                    text(name: 'My_Text' , defaultvalue: 'hi' , description:'hello this is my text parameter' )
-                                     password (name: 'Pswd' , defaultvalue: 'Secret' , description:'hello this is my password parameter' )
+          string(name: 'My_String' , defaultValue: 'hello' , description:'hello this is my string parameter' )  
+          booleanParam(name: 'My_boolen_value' , defaultValue: 'True' , description:'hello this is my boolean parameter' )
+                                    text(name: 'My_Text' , defaultValue: 'hi' , description:'hello this is my text parameter' )
+                                     password (name: 'Pswd' , defaultValue: 'Secret' , description:'hello this is my password parameter' )
                                      choice(name:'last_four_cellphone_number' , choices: ['5432', '6345' , '1020' ,'no_cellphone'], description:'select your choices')
      }
    stages { 
