@@ -1,18 +1,29 @@
 pipeline { 
-agent any 
+agent any
+   environment {
+      JENKINS_VERSION = '1.2.30' 
+   }
    stages { 
       stage('test') {
-         when {
+          /*when {
             expression {
                BRANCH_NAME = 'FEATURE' } 
-         } 
+         } */
          steps {
             echo 'this is just the test' 
          }
       
       }
    }
-      
+    
+   stages {
+      stage('check_env_variable') {
+         steps {
+            echo "this is my Jenkins_verison: ${JENKINS_VERSION} "
+         }
+      }
+   }
+
   /* stage ('maven validate'){
     steps{
       sh 'mvn validate'
