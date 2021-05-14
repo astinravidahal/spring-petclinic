@@ -4,13 +4,18 @@ agent any
       JENKINS_VERSION = '1.2.30' 
    }
    stages { 
+       
       stage('test') {
+          environment {
+      JENKINS_VERSION = '1.2.30' 
+   }
           /*when {
             expression {
                BRANCH_NAME = 'FEATURE' } 
          } */
          steps {
             echo 'this is just the test' 
+            echo "calling local variable version: ${JENKINS_VERSION} "
          }
       
       }
