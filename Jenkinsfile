@@ -5,7 +5,7 @@ agent any
    }
      Parameters {
           string {string(name: 'My_String' , default_value: 'hello' , Description:'hello this is my string parameter' ) } 
-          booleanParam { booleanParam((name: 'My_boolen_value' , default_value: 'True' , Description:'hello this is my boolean parameter' )}
+          booleanParam { booleanParam(name: 'My_boolen_value' , default_value: 'True' , Description:'hello this is my boolean parameter' )}
                                     text  { text(name: 'My_Text' , default_value: 'hi' , Description:'hello this is my text parameter' )}
                                     password { password (name: 'Pswd' , default_value: 'Secret' , Description:'hello this is my password parameter' )}
                                     choice{ choice(name:'last_four_cellphone_number' , choices: ['5432', '6345' , '1020' ,'no_cellphone'])}
