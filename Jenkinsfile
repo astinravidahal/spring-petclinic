@@ -9,6 +9,7 @@ agent any
                                     text(name: 'My_Text' , default_value: 'hi' , Description:'hello this is my text parameter' )
                                      password (name: 'Pswd' , default_value: 'Secret' , Description:'hello this is my password parameter' )
                                      choice(name:'last_four_cellphone_number' , choices: ['5432', '6345' , '1020' ,'no_cellphone'])
+     }
    stages { 
        
       stage('test') {
