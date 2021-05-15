@@ -1,4 +1,5 @@
-/* def grv
+/*
+def grv
 pipeline { 
 agent any
      
@@ -16,10 +17,11 @@ agent any
        
       stage('test') {
         
-       /*  when {
+        when {
             expression {
                BRANCH_NAME = 'FEATURE' } 
-         } */
+         } 
+         
          steps {
             echo 'this is just the test' 
             echo "calling local variable version: ${JENKINS_VERSION} "
@@ -68,7 +70,7 @@ stage ('mvn clean install'){
 steps {
 sh 'mvn clean install'
 }
-}  */
+}  
      stage ('call script') {
           steps {
                script { 
@@ -101,4 +103,18 @@ sh 'mvn clean install'
 }
 
 */ 
+
+
+
+pipeline {
+    agent { Dockerfile true }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+                sh 'svn --version'
+            }
+        }
+    }
+}
 
