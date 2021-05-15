@@ -1,6 +1,6 @@
 pipeline { 
 agent any
-     grv=load'script.groovy'
+     grv=load 'script.groovy'
      environment {
       JENKINS_VERSION = '1.2.30' 
    }
