@@ -45,7 +45,7 @@ agent any
          }
       }
    
-   }
+   
   /* stage ('maven validate'){
     steps{
       sh 'mvn validate'
@@ -74,6 +74,7 @@ sh 'mvn clean install'
                grv.finalRun()
           }
      }
+   }
       
    
   post {
