@@ -107,7 +107,7 @@ sh 'mvn clean install'
 
 
 pipeline {
-    agent { Dockerfile true }
+    agent { dockerfile true }
     stages {
         stage('Test') {
             steps {
