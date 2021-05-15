@@ -1,6 +1,6 @@
 pipeline { 
 agent any
-     grv=load 'script.groovy'
+     
      environment {
       JENKINS_VERSION = '1.2.30' 
    }
@@ -71,6 +71,7 @@ sh 'mvn clean install'
      stage ('call script') {
           steps {
                script { 
+               grv=load 'script.groovy'
                grv.runTest()
                grv.finalRun()
                }
