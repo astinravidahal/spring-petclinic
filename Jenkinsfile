@@ -70,8 +70,10 @@ sh 'mvn clean install'
 }  */
      stage ('call script') {
           steps {
+               script { 
                grv.runTest()
                grv.finalRun()
+               }
           }
      }
    }
