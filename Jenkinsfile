@@ -1,3 +1,4 @@
+def grv
 pipeline { 
 agent any
      
@@ -77,7 +78,19 @@ sh 'mvn clean install'
                }
           }
      }
+  
+        stage ('run groovy param') {
+             steps {
+                  script {
+                       grv=load 'script.groovy'
+                       grv.runParam()
+                  }
+             }
+        }
+        
+   
    }
+     
       
    
   post {
