@@ -1,4 +1,7 @@
 FROM openjdk:8
-EXPOSE 8082
-ENTRYPOINT ["java" ,"./mvnw package"]
-ENTRYPOINT ["java", " -jar", "target/*.jar"]
+
+EXPOSE 9000
+
+ENTRYPOINT [ "java", "./mvn package"]
+
+ENTRYPOINT [ "java", "-jar", "target/*.jar" ]
