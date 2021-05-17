@@ -1,4 +1,4 @@
 FROM openjdk:8
 EXPOSE 8082
-CMD ["java" ,"./mvnw package"]
-CMD ["java", "java -jar target/*.jar"]
+ENTRYPOINT ["java" ,"./mvnw package"]
+ENTRYPOINT ["java", " -jar", target/*.jar"]
